@@ -1,0 +1,15 @@
+include::_partials/attributes.adoc[]
+
+:context:
+:includedir: common
+
+= Knative on OpenShift documentation
+
+// Knative on an Openshift 4.0 cluster 
+xref:assembly_knative-OCP-4x.adoc[4]
+
+// Knative on an Openshift 3.11 cluster 
+xref:assembly_knative-OCP-311.adoc[311]
+
+// Knative on a Minishift cluster
+xref:assembly_knative-minishift.adoc[Minishift]

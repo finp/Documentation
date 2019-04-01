@@ -1,0 +1,4 @@
+* Home
+** xref:assembly_knative-minishift.adoc[minishift]
+** 3.11
+** 4

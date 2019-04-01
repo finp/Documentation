@@ -6,11 +6,11 @@
 = Knative on an OpenShift cluster 4.0
 
 // Knative on OpenShift cluster overview
-include::common/con_knative-OCP-4x.adoc[leveloffset=+1]
+include::_partials/con_knative-OCP-4x.adoc[leveloffset=+1]
 
 // Installing Knative on an OpenShift cluster 4.0 using the script provided
-include::common/proc_installing-knative-OCP-4x.adoc[leveloffset=+1] 
+include::_partials/proc_installing-knative-OCP-4x.adoc[leveloffset=+1] 
 
 // Allowing external access to Knative services using a configured hostname OCP 4.0
-include::common/assembly_allowing-external-access-knative-services-OCP-4x.adoc[leveloffset=+1] 
+include::_partials/assembly_allowing-external-access-knative-services-OCP-4x.adoc[leveloffset=+1] 
 

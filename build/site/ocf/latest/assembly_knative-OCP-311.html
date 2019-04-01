@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knative on an OpenShift cluster 3.11 :: Serverless</title>
+    <link rel="canonical" href="https://example.org/docs/ocf/latest/assembly_knative-OCP-311.html">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://example.org/docs">Serverless</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="ocf" data-version="latest">
+  <aside class="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ocf</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Home</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assembly_knative-minishift.html">minishift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">3.11</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">4</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ocf</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">ocf</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">ocf</a></li>
+    <li class="crumb"><a href="assembly_knative-OCP-311.html">Knative on an OpenShift cluster 3.11</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/pwright/repos/Documentation/modules/ROOT/pages/assembly_knative-OCP-311.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>Knative on an OpenShift cluster 3.11</h1>
+<div class="sect1">
+<h2 id="knative-ocp-311_{context}"><a class="anchor" href="#knative-ocp-311_{context}"></a>Knative on an OpenShift cluster</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The functionality introduced by Knative on an OpenShift cluster is developer preview only. Red Hat support is not provided, and this release should not be used in a production environment.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The script installation method is recommended.</p>
+</div>
+<div class="sect3">
+<h4 id="_supported_platform_version"><a class="anchor" href="#_supported_platform_version"></a>Supported platform version</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong> Platform</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Supported versions</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.11</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Installation of Docker and Kubernetes are required to use Knative on an OpenShift cluster. These components are outside the scope of this documentation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installing-knative-OCP-using-script-311_{context}"><a class="anchor" href="#installing-knative-OCP-using-script-311_{context}"></a>Installing Knative on an OpenShift cluster 3.11 using the script provided</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use a script to install Knative</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The functionality introduced by Knative on an OpenShift cluster is developer preview only. Red Hat support is not provided, and this release should not be used in a production environment.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You will need cluster administrator privileges to install and use Knative on an OpenShift cluster.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Login to the cluster using your admin credentials.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc login &lt;admin-credentials&gt;`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clone the <code>knative-operators</code> repository.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`git clone https://github.com/openshift-cloud-functions/knative-operators`
+`cd knative-operators/`
+`git fetch --tags`
+`git checkout openshift-v0.2.0`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the following SSH properties using your OpenShift cluster credentials.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`export KUBE_SSH_USER=&lt;username&gt;`
+`export KUBE_SSH_KEY=&lt;path-to-private-ssh-key&gt;`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Navigate to the newly cloned repository and run the <code>install.sh</code> script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`./etc/scripts/install.sh`</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The installation script takes around 20-30 minutes to complete, depending on your system.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Once the script starts, you will see the following warning and prompt.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`WARNING: This script will blindly attempt to install OLM, istio, and knative on your OpenShift cluster, so if any are already there, hijinks may ensue.`</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`If your cluster isn't minishift, ensure $KUBE_SSH_KEY and $KUBE_SSH_USER are set`</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`Pass -q to disable this warning`</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`Enter to continue or Ctrl-C to exit:`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Press Enter to continue.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="'allowing-external-access-knative-services_{context}"><a class="anchor" href="#'allowing-external-access-knative-services_{context}"></a>Allowing external access to Knative services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use a configured hostname to access Knative services.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default, Knative services are not accessible outside the OpenShift cluster. You can enable access by configuring a hostname. This method uses wildcard routing to automatically assign a hostname.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Find the default routing subdomain of your OpenShift cluster.</p>
+</li>
+<li>
+<p>Open the ConfigMap for your cluster to edit the Knative serving configuration.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc edit configmap config-domain -n knative-serving`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Replace the default "example.com" with your default routing subdomain.</p>
+</li>
+<li>
+<p>Configure the router to allow wildcard domains.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc set env dc/router ROUTER_ALLOW_WILDCARD_ROUTES=true -n default`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a route that forwards wildcard traffic to the <code>knative-ingressgateway</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This route requires one host per namespace, which runs Knative services. The format for the host of the route is <code>wildcard.&lt;namespace&gt;.&lt;default-routing-subdomain&gt;</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Create a wildcard yaml file (in our example this is named <code>wildcard-routes.yml</code>) with the following contents:</p>
+<div class="literalblock">
+<div class="content">
+<pre>apiVersion: route.openshift.io/v1
+kind: Route
+  metadata:
+  name: knative-ingressgateway-wildcard
+  namespace: &lt;namespace-running-knative-services&gt;
+spec:
+  host: wildcard.&lt;namespace&gt;.&lt;default-routing-subdomain&gt;
+  port:
+    targetPort: http2
+  to:
+    kind: Service
+    name: knative-ingressgateway
+    weight: 100
+    wildcardPolicy: Subdomain</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the yaml file.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc apply -f wildcard-routes.yml`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Clone the demo repository.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`git clone https://github.com/openshift-cloud-functions/demos.git`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Deploy the demo application.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc apply -f ~/demos/knative-kubecon/serving/010-service.yaml`</pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the domain that was assigned to the application. You can now access the demo application using this domain.</p>
+<div class="literalblock">
+<div class="content">
+<pre>`oc get service.serving.knative.dev/dumpy`</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more information about default routing subdomains, see <a href="https://docs.openshift.com/enterprise/3.0/install_config/install/deploy_router.html#customizing-the-default-routing-subdomain">OpenShift documentation</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
