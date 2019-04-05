@@ -26,6 +26,7 @@ Introduction
 ----
 ====
 
+[start=2]
 . Add the tags required for collapsing section
 
 .Example edits
