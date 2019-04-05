@@ -1,7 +1,7 @@
 
 = Asciidoctor 2
 
-. Prerequisities
+.Prerequisities
 [%collapsible]
 ====
 Some knowledge of asciidoc, for example https://asciidoctor-docs.netlify.com/asciidoc/1.5/
