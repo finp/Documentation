@@ -1,5 +1,5 @@
 
-= Asciidoctor 2
+= Creating collapsible sections using Asciidoctor 2 
 
 .Prerequisities
 [%collapsible]
@@ -44,3 +44,11 @@ Introduction
 * bullet 2
 ----
 ====
+
+[NOTE]
+====
+* requires a block, and blocks cannot contain headings
+* breaks numbering
+* left hand margin alignment seems a bit off
+====
+
