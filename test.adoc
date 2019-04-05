@@ -10,12 +10,31 @@ Some knowledge of asciidoc, for example https://asciidoctor-docs.netlify.com/asc
 .Procedure
  
 . Edit an asciidoc file
+
+.Example file
 [%collapsible]
 ====
-For example
+
 [,asciidoc]
 ----
 = Heading
+
+Introduction
+
+* bullet 1
+* bullet 2
+----
+====
+
+. Add the tags required for collapsing section
+.Example edits
+[%collapsible]
+====
+
+[,asciidoc]
+----
+= Heading
+[%collapsible]
 
 Introduction
 
