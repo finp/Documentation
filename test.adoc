@@ -27,6 +27,7 @@ Introduction
 ====
 
 . Add the tags required for collapsing section
+
 .Example edits
 [%collapsible]
 ====
